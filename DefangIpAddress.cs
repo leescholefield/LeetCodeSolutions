@@ -6,9 +6,10 @@
 public class Solution {
     public string DefangIPaddr(string address) {
         
-        for (int i = address.Length - 1; i > 0; i--) {
+        for (int i = address.Length - 2; i > 0; i--) {
             if (address[i] == '.') {
-                address = address.Substring(0, i) + "[.]" + address.Substring(i+1); 
+                address = address.Substring(0, i) + "[.]" + address.Substring(i+1);
+                i--;
             }
         }
         
