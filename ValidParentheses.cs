@@ -13,6 +13,7 @@ public class Solution {
         // maintains a list of currently 'open' chars
         Stack<char> openerStack = new Stack<char>();
         
+        // could have these in a dictionary but actually takes more time in the test suite
         char[] openers = new char[]{'(', '{', '['};
         char[] closers = new char[]{')', '}', ']'};
         foreach(char c in s) {
